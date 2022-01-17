@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		34AA7367279058A5009FCF20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AA7366279058A5009FCF20 /* AppDelegate.swift */; };
 		34AA7369279058A5009FCF20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AA7368279058A5009FCF20 /* SceneDelegate.swift */; };
-		34AA736B279058A5009FCF20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AA736A279058A5009FCF20 /* ViewController.swift */; };
+		34AA736B279058A5009FCF20 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AA736A279058A5009FCF20 /* LoginViewController.swift */; };
 		34AA736E279058A5009FCF20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34AA736C279058A5009FCF20 /* Main.storyboard */; };
 		34AA7370279058A9009FCF20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34AA736F279058A9009FCF20 /* Assets.xcassets */; };
 		34AA7373279058A9009FCF20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34AA7371279058A9009FCF20 /* LaunchScreen.storyboard */; };
+		34AA737B27905942009FCF20 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AA737A27905942009FCF20 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		34AA7363279058A5009FCF20 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34AA7366279058A5009FCF20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34AA7368279058A5009FCF20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		34AA736A279058A5009FCF20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		34AA736A279058A5009FCF20 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		34AA736D279058A5009FCF20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		34AA736F279058A9009FCF20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34AA7372279058A9009FCF20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34AA7374279058A9009FCF20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34AA737A27905942009FCF20 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				34AA7366279058A5009FCF20 /* AppDelegate.swift */,
 				34AA7368279058A5009FCF20 /* SceneDelegate.swift */,
-				34AA736A279058A5009FCF20 /* ViewController.swift */,
+				34AA736A279058A5009FCF20 /* LoginViewController.swift */,
+				34AA737A27905942009FCF20 /* WelcomeViewController.swift */,
 				34AA736C279058A5009FCF20 /* Main.storyboard */,
 				34AA736F279058A9009FCF20 /* Assets.xcassets */,
 				34AA7371279058A9009FCF20 /* LaunchScreen.storyboard */,
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34AA736B279058A5009FCF20 /* ViewController.swift in Sources */,
+				34AA736B279058A5009FCF20 /* LoginViewController.swift in Sources */,
+				34AA737B27905942009FCF20 /* WelcomeViewController.swift in Sources */,
 				34AA7367279058A5009FCF20 /* AppDelegate.swift in Sources */,
 				34AA7369279058A5009FCF20 /* SceneDelegate.swift in Sources */,
 			);
@@ -305,7 +309,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -332,7 +336,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
