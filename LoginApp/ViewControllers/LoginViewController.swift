@@ -11,8 +11,6 @@ class  LoginViewController: UIViewController{
     
     @IBOutlet var userTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
-        
-    let viewControllers: [Any] = [WelcomeViewController.self, AboutMeViewController.self]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +25,7 @@ class  LoginViewController: UIViewController{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let tabBarController = segue.destination as! UITabBarController
+        guard let viewControllers = tabBarController.viewControllers else { return }
         
         for viewController in viewControllers {
             if let welcomeVC = viewController as? WelcomeViewController {

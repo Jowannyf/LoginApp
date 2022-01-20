@@ -76,14 +76,23 @@
                                     <constraint firstAttribute="trailing" secondItem="I9f-iT-1Au" secondAttribute="trailing" constant="20" id="t9c-gw-8KH"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="302-Ul-N8s">
+                                <rect key="frame" x="134" y="87" width="107" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.89000000000000001" green="0.58126203352516026" blue="0.26270319271037423" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="302-Ul-N8s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="134" id="9sg-b8-dH7"/>
                             <constraint firstItem="CQ3-hC-1tx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Kui-CF-bBw"/>
                             <constraint firstItem="CQ3-hC-1tx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uzv-K5-Few"/>
+                            <constraint firstItem="302-Ul-N8s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="87" id="bIJ-Hy-YIc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CQ3-hC-1tx" secondAttribute="trailing" constant="25" id="bTI-eD-ELf"/>
                             <constraint firstItem="CQ3-hC-1tx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="dFv-fD-wiC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="302-Ul-N8s" secondAttribute="trailing" constant="134" id="sj1-UN-epU"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -154,25 +163,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="450" translatesAutoresizingMaskIntoConstraints="NO" id="kBS-EV-eiX">
-                                <rect key="frame" x="16" y="71.5" width="343" height="524"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="250" translatesAutoresizingMaskIntoConstraints="NO" id="kBS-EV-eiX">
+                                <rect key="frame" x="16" y="145" width="343" height="377"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About me" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJS-vv-XdJ">
-                                        <rect key="frame" x="119.5" y="0.0" width="104.5" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About me" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJS-vv-XdJ">
+                                        <rect key="frame" x="129" y="0.0" width="85.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFI-Gf-0uK">
-                                        <rect key="frame" x="92" y="480" width="159" height="44"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.forward.fill" catalog="system" title="Show face">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <segue destination="IHc-W4-IA0" kind="presentation" modalPresentationStyle="automatic" id="FiT-Fl-HHu"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="BQn-nV-r4k">
+                                        <rect key="frame" x="81.5" y="274" width="180.5" height="103"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFI-Gf-0uK">
+                                                <rect key="frame" x="11.5" y="0.0" width="157" height="44"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up.fill" catalog="system" title="Show face">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="IHc-W4-IA0" kind="presentation" modalPresentationStyle="automatic" id="FiT-Fl-HHu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoW-R4-eTx">
+                                                <rect key="frame" x="0.0" y="59" width="180.5" height="44"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.right.fill" catalog="system" title="Show hobby">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="openURL" destination="UDc-mt-6g5" eventType="touchUpInside" id="uQG-z1-vtK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -184,7 +208,7 @@
                             <constraint firstItem="H1P-2u-CFi" firstAttribute="trailing" secondItem="kBS-EV-eiX" secondAttribute="trailing" constant="16" id="voh-35-FVJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="ОБО МНЕ" id="sYb-gr-ege"/>
+                    <navigationItem key="navigationItem" title="ОБО МНЕ" largeTitleDisplayMode="always" id="sYb-gr-ege"/>
                     <connections>
                         <outlet property="aboutMeLabel" destination="LJS-vv-XdJ" id="8dd-cu-HhD"/>
                     </connections>
@@ -202,7 +226,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="My face" translatesAutoresizingMaskIntoConstraints="NO" id="eDd-qI-MSn">
-                                <rect key="frame" x="16" y="-316" width="343" height="1280"/>
+                                <rect key="frame" x="16" y="-316.5" width="343" height="1280"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6zL-S2-K1k"/>
@@ -259,9 +283,10 @@
     </scenes>
     <resources>
         <image name="My face" width="960" height="1280"/>
-        <image name="arrowshape.turn.up.forward.fill" catalog="system" width="128" height="106"/>
+        <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
         <image name="person.fill.questionmark" catalog="system" width="128" height="104"/>
         <image name="rhombus.fill" catalog="system" width="107" height="128"/>
+        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
