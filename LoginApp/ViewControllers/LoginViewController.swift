@@ -11,9 +11,8 @@ class  LoginViewController: UIViewController{
     
     @IBOutlet var userTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
-    
-    let userName = "User"
-    let password = "password"
+        
+    let viewControllers: [Any] = [WelcomeViewController.self, AboutMeViewController.self]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,21 +26,31 @@ class  LoginViewController: UIViewController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userText = userName
+        let tabBarController = segue.destination as! UITabBarController
+        
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.userText = UserData.user.person.fullName
+            } else if let navigationVC = viewController as? UINavigationController {
+                let aboutUserVC = navigationVC.topViewController as! AboutMeViewController
+                aboutUserVC.myAge = UserData.user.person.age
+                aboutUserVC.myMetier = UserData.user.person.metier
+                aboutUserVC.myHobby = UserData.user.person.hobby
+            }
+        }
     }
     
     @IBAction func showNameButton(_ sender: Any) {
-        showAlert(title: "OOOps", message: "Your name is \(userName)")
+        showAlert(title: "OOOps", message: "Your name is \(UserData.user.user)")
     }
     
     @IBAction func showPasswordButton(_ sender: Any) {
-        showAlert(title: "OOOps", message: "Your password is \(password)")
+        showAlert(title: "OOOps", message: "Your password is \(UserData.user.password)")
     }
     
     
     @IBAction func loginButton() {
-        if userTextField.text != userName || passwordTextField.text != password {
+        if userTextField.text != UserData.user.user || passwordTextField.text != UserData.user.password {
             showAlert(title: "Wrong user name or password",
                       message: "Please, enter correct user name and password",
                       textField: passwordTextField)
